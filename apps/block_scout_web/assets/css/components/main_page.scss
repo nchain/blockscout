@@ -1,0 +1,135 @@
+$main-color: #8ECFF4;
+$main-text-color: #2D6CC9;
+$secondary-text-color: #68A2FA;
+$links-text-color: #275AA4;
+$chart-block-bg-color: #17314F;
+$counters-bg-color: #20446E;
+$counter-title-color: #96BDE8;
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url(../RobotoCondensed-Regular.ttf) format("truetype"); 
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url(../RobotoMono-Regular.ttf) format("truetype"); 
+}
+
+.main-block {
+    background-color: $main-color;
+    padding-top: 45px;
+    padding-bottom: 185px;
+}
+
+.main-text {
+    color: $main-text-color ;
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+.secondary-text {
+    color: $secondary-text-color;
+}
+
+.header {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.info {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.main-block-margin {
+    margin: 16px 0px;
+}
+
+.icon-link {
+    margin-right: 5px;
+    path {
+        fill: $links-text-color;
+        transition: $transition-cont;
+    }
+
+    svg {
+        margin-right: 4px;
+        margin-left: 4px;
+        margin-bottom: 6px;
+        height: 14px;
+        width: 14px;
+    }
+}
+
+.chart-block {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $chart-block-bg-color;
+    height: 378px;
+    border-radius: 8px;
+    margin-top: -126px;
+}
+
+.black-fill {
+    path {
+        fill: black;
+    }
+}
+
+.focus-search {
+    color: $secondary-text-color !important;
+    border-color: $secondary-text-color !important;
+}
+
+.counters-container {
+    padding: 24px;
+    border-radius: 8px 0px 0px 8px;
+    background-color: $counters-bg-color;
+    margin-top: 32px;
+    justify-self: end;
+    height: fit-content;
+}
+
+.counters-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.counter-holder {
+    margin: 24px;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+}
+
+.counter-value {
+    display: block;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: $secondary-text-color;
+}
+
+.counter-title {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    color: $counter-title-color;
+    margin-top: 4px;
+}
+
+.form-control {
+    border-radius: 8px !important;
+}
+
+.container {
+    padding: 0 !important;
+}
