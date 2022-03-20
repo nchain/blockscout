@@ -113,6 +113,7 @@ $counter-title-color: #96BDE8;
     font-size: 18px;
     line-height: 120%;
     color: $secondary-text-color;
+    margin-bottom: 4px;
 }
 
 .counter-title {
@@ -123,7 +124,6 @@ $counter-title-color: #96BDE8;
     line-height: 16px;
     letter-spacing: 1px;
     color: $counter-title-color;
-    margin-top: 4px;
 }
 
 .form-control {
