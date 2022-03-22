@@ -6,7 +6,7 @@
     <div class="secondary-text info main-block-margin">Search for <a class="icon-link"><%= render BlockScoutWeb.IconsView, "_accounts_icon.html" %>Addresses</a> <a class="icon-link"><%= render BlockScoutWeb.IconsView, "_tokens_icon.html" %>Tokens</a> <a class="icon-link"><%= render BlockScoutWeb.IconsView, "_hashtag_icon.html" %>Names</a> <a class="icon-link"><%= render BlockScoutWeb.IconsView, "_transaction_icon.html" %>Transactions</a> <a class="icon-link"><%= render BlockScoutWeb.IconsView, "_block_icon.html" %>Blocks</a></div>
   </div>
 </div>
-<div class="chart-block container">
+<div class="chart-block rounded-borders container">
   <div class="chart-container">
         <div class="dashboard-banner-network-graph">
         <!-- Graph -->
@@ -137,6 +137,18 @@
         <span class="counter-value">5,893,189</span>
         <span class="counter-title">Wallet Addresses</span>
       </div>
+    </div>
+  </div>
+</div>
+<div class="container blocks-container">
+  <div class="new-blocks-block rounded-borders">
+    <div class="title-row">
+      <div class="card-title-new">Blocks</div>
+      <a class="card-button">View All Blocks</a>
+    </div>
+
+    <div class="blocks-row">
+      
     </div>
   </div>
 </div>

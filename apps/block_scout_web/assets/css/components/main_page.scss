@@ -5,6 +5,8 @@ $links-text-color: #275AA4;
 $chart-block-bg-color: #17314F;
 $counters-bg-color: #20446E;
 $counter-title-color: #96BDE8;
+$card-title-color: #707886;
+$card-btn-border-color: #A3A9B5;
 
 @font-face {
     font-family: 'Roboto Condensed';
@@ -69,8 +71,11 @@ $counter-title-color: #96BDE8;
     justify-content: flex-end;
     background-color: $chart-block-bg-color;
     height: 378px;
-    border-radius: 8px;
     margin-top: -126px;
+}
+
+.rounded-borders {
+    border-radius: 8px;
 }
 
 .black-fill {
@@ -132,4 +137,65 @@ $counter-title-color: #96BDE8;
 
 .container {
     padding: 0 !important;
+}
+
+.new-blocks-block {
+    margin-left: 32px;
+    margin-right: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    background-color: white;
+}
+
+.title-row {
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 16px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+}
+
+.blocks-row {
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 16px 0px;
+}
+
+.card-title-new {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    color: $card-title-color;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin: 0px 0px;
+}
+
+.card-button {
+    border: 1px solid $card-btn-border-color;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    color: $card-btn-border-color;
+    padding: 4px 8px;
+    height: 24px;
+}
+
+.blocks-container {
+    margin-top: -100px;
 }
