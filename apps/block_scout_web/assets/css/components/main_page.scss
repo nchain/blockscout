@@ -8,15 +8,6 @@ $counter-title-color: #96BDE8;
 $card-title-color: #707886;
 $card-btn-border-color: #A3A9B5;
 
-@font-face {
-    font-family: 'Roboto Condensed';
-    src: url(../RobotoCondensed-Regular.ttf) format("truetype"); 
-}
-
-@font-face {
-    font-family: 'Roboto Mono';
-    src: url(../RobotoMono-Regular.ttf) format("truetype"); 
-}
 
 .main-block {
     background-color: $main-color;
@@ -34,7 +25,7 @@ $card-btn-border-color: #A3A9B5;
     color: $secondary-text-color;
 }
 
-.header {
+.header-main {
     font-size: 32px;
     font-weight: 700;
     line-height: 100%;
@@ -51,6 +42,7 @@ $card-btn-border-color: #A3A9B5;
 }
 
 .icon-link {
+    color: $links-text-color;
     margin-right: 5px;
     path {
         fill: $links-text-color;
@@ -76,6 +68,18 @@ $card-btn-border-color: #A3A9B5;
 
 .rounded-borders {
     border-radius: 8px;
+    &.btn {
+        border-radius: 5px;
+    }
+}
+
+a {
+    border-radius: 5px;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
 }
 
 .black-fill {
@@ -144,8 +148,6 @@ $card-btn-border-color: #A3A9B5;
     margin-right: 32px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 16px;
     background-color: white;
 }
 
@@ -162,11 +164,12 @@ $card-btn-border-color: #A3A9B5;
 }
 
 .blocks-row {
-    flex: none;
     order: 1;
     align-self: stretch;
     flex-grow: 0;
     margin: 16px 0px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card-title-new {
@@ -198,4 +201,32 @@ $card-btn-border-color: #A3A9B5;
 
 .blocks-container {
     margin-top: -70px;
+}
+
+.blocks-container-shadow {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 0px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.roboto-font {
+    font-family: 'Roboto';
+}
+
+.tile-label {
+    font-size: 14px;
+}
+
+.fee-info {
+    font-family: 'Roboto Mono';
+}
+
+.tile {
+    font-family: 'Roboto';
+}
+
+.bs-label {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    color: $card-title-color !important;
+    margin-bottom: 0.25rem;
 }
