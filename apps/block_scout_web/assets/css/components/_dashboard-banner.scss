@@ -9,7 +9,7 @@ $dashboard-line-color-market: $secondary !default;
 $dashboard-line-color-transactions: $warning !default;
 $dashboard-stats-item-label-color: #fff !default;
 $dashboard-stats-item-value-color: rgba(#fff, 0.8) !default;
-$dashboard-banner-chart-legend-label-color: #fff !default;
+// $dashboard-banner-chart-legend-label-color: $dashboard-tab-name !default;
 $dashboard-banner-chart-legend-value-color: $dashboard-stats-item-value-color !default;
 $dashboard-stats-item-border-color: $primary !default;
 $dashboard-banner-network-plain-container-height: 205px;
@@ -122,6 +122,9 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
       &::before {
         background: $dashboard-line-color-transactions;
       }
+      .dashboard-banner-chart-legend-value {
+        color: $dashboard-line-color-transactions !important;
+      }
     }
   }
 
@@ -132,6 +135,12 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
     font-weight: 600;
     line-height: 1.2;
     margin: 0 0 5px;
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1px;
 
     @media (max-width: 374px) {
       position: relative;
@@ -144,11 +153,13 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
   }
 
   .dashboard-banner-chart-legend-value {
-    color: $dashboard-banner-chart-legend-value-color;
+    color: $tertiary;
     display: block;
-    font-size: 12px;
-    font-weight: normal;
-    line-height: 1.2;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
 
     &.inline {
       display: inline-block;
@@ -156,6 +167,7 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
   }
 
   .dashboard-banner-chart-legend-value-container {
+    margin-bottom: 5px;
     white-space: nowrap;
   }
 

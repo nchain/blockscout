@@ -12,9 +12,9 @@ $footer-item-disc-color: $secondary;
 .footer-logo { filter: brightness(0) invert(1); }
 
 // dashboard
+$dashboard-banner-chart-legend-label-color: #ABCCFC;
 $dashboard-line-color-price: $tertiary; // price left border
 $dashboard-font-color: $footer-title-color;
-$dashboard-banner-chart-legend-label-color: #dcc8ff;
 $dashboard-stats-item-label-color: $dashboard-banner-chart-legend-label-color;
 $dashboard-banner-chart-legend-value-color: #fff; // chart labels
 $dashboard-stats-item-value-color: #fff; // stat values
