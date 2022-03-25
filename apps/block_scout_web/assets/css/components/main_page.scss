@@ -200,7 +200,7 @@ a {
 }
 
 .blocks-container {
-    margin-top: -70px;
+    margin-top: -40px;
 }
 
 .blocks-container-shadow {
@@ -229,4 +229,8 @@ a {
     font-weight: 600;
     color: $card-title-color !important;
     margin-bottom: 0.25rem;
+}
+
+.f-g-1 {
+    flex-grow: 1;
 }
