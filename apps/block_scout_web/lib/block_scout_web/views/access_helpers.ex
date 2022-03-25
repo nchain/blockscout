@@ -3,6 +3,7 @@ defmodule BlockScoutWeb.AccessHelpers do
   Helpers to restrict access to some pages filtering by address
   """
 
+  import Config
   import Phoenix.Controller
 
   alias BlockScoutWeb.API.APILogger
@@ -68,7 +69,7 @@ defmodule BlockScoutWeb.AccessHelpers do
   end
 
   def check_rate_limit(conn) do
-    if Mix.env() == :test do
+    if config_env() == :test do
       :ok
     else
       global_api_rate_limit = Application.get_env(:block_scout_web, :api_rate_limit)[:global_limit]
