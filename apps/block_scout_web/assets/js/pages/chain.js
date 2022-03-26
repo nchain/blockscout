@@ -383,7 +383,6 @@ export function placeHolderBlock (blockNumber) {
         </div>
         <div class="tile-bottom-contents h-100 d-flex">
           <span class="other-block-text secondary-text-tile align-self-center">${window.localized['Block Processing']}</span>
-          <span class="other-block-text secondary-text-tile">${window.localized['Block Processing']}</span>
         </div>
       </div>
     </div>
