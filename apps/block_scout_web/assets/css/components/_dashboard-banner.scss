@@ -62,6 +62,7 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
   margin: 15px 0 20px 0;
   position: relative;
   min-height: 100px;
+  height: 200px;
 
   @include media-breakpoint-down(md) {
     flex-grow: 0;

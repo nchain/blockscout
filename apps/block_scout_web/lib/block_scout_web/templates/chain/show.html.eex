@@ -121,21 +121,37 @@
 
   <div class="counters-container">
     <div class="counters-table">
+      <%= case @average_block_time do %>
+        <% {:error, :disabled} -> %>
+          <%= nil %>
+        <% average_block_time -> %>
+        <div class="counter-holder">
+          <span class="counter-value" data-selector="average-block-time"><%= Timex.format_duration(average_block_time, Explorer.Counters.AverageBlockTimeDurationFormat) %></span>
+          <span class="counter-title"><%= gettext "Average block time" %></span>
+        </div>
+      <% end %>
       <div class="counter-holder">
-        <span class="counter-value">5 seconds</span>
-        <span class="counter-title">Average block time</span>
+        <span class="counter-value" data-selector="block-count"><%= BlockScoutWeb.Cldr.Number.to_string!(@block_count, format: "#,###") %></span>
+        <span class="counter-title"><%= gettext "Total blocks" %></span>
       </div>
       <div class="counter-holder">
-        <span class="counter-value">20,293,201</span>
-        <span class="counter-title">Total Blocks</span>
+        <span class="counter-value" data-selector="transaction-count"><%= BlockScoutWeb.Cldr.Number.to_string!(@transaction_estimated_count, format: "#,###") %></span>
+        <%= if @total_gas_usage > 0 do %>
+          <span
+            data-toggle="tooltip"
+            data-placement="top"
+            data-html="true"
+            data-template="<div class='tooltip tooltip-inversed-color tooltip-gas-usage' role='tooltip'><div class='arrow'></div><div class='tooltip-inner'></div></div>"
+            title="<div class='custom-tooltip-header'>Total gas used</div><div class='custom-tooltip-description'><b><%= BlockScoutWeb.Cldr.Number.to_string!(@total_gas_usage, format: "#,###") %><b></div>"
+            class="custom-tooltip-total-transactions">
+            <i style="color: #ffffff;" class="fa fa-info-circle ml-2"></i>
+          </span>
+        <% end %>
+        <span class="counter-title"><%= gettext "Total transactions" %></span>
       </div>
       <div class="counter-holder">
-        <span class="counter-value">85,513,152</span>
-        <span class="counter-title">Total Transactions</span>
-      </div>
-      <div class="counter-holder">
-        <span class="counter-value">5,893,189</span>
-        <span class="counter-title">Wallet Addresses</span>
+        <span class="counter-value" data-selector="address-count"><%= BlockScoutWeb.Cldr.Number.to_string!(@address_count, format: "#,###") %></span>
+        <span class="counter-title"><%= gettext "Wallet addresses" %></span>
       </div>
     </div>
   </div>
