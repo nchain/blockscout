@@ -229,7 +229,7 @@
           <a href="#" class="alert-link"><span data-selector="channel-batching-count"></span> <%= gettext "More transactions have come in" %></a>
         </div>
       </div>
-      <span data-selector="transactions-list" data-transactions-path="<%= @transactions_path %>">
+      <table data-selector="transactions-list" data-transactions-path="<%= @transactions_path %>">
         <button data-selector="error-message" class="alert alert-danger col-12 text-left" style="display: none;">
           <span class="alert-link">
             <%= gettext "Something went wrong, click to retry." %>
@@ -238,7 +238,7 @@
         <div hidden data-selector="loading-message">
           <%= render BlockScoutWeb.CommonComponentsView, "_tile-loader.html" %>
         </div>
-      </span>
+      </table>
     </div>
   </div>
 </section>
